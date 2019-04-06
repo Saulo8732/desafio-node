@@ -1,0 +1,19 @@
+{
+  "name": "desafio-node",
+  "version": "1.0.0",
+  "description": "Desafio para criar uma API de gerenciamento de usuarios com node",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Saulo8732/desafio-node.git"
+  },
+  "author": "Saulo Santiago",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Saulo8732/desafio-node/issues"
+  },
+  "homepage": "https://github.com/Saulo8732/desafio-node#readme"
+}
