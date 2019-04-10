@@ -4,7 +4,11 @@
   "description": "Desafio para criar uma API de gerenciamento de usuarios com node",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "nodemon node_modules/babel-cli/bin/babel-node.js  index.js",
+    "test": "npm run lint",
+    "test:routes": "NODE_ENV=test ./node_modules/.bin/mocha  --opts test/routes/mocha.opts ./test/routes/**/*.js",
+    "lint": "eslint '**/*.js'",
+    "lint:fix": "eslint '**/*.js' --fix"
   },
   "repository": {
     "type": "git",
@@ -15,5 +19,26 @@
   "bugs": {
     "url": "https://github.com/Saulo8732/desafio-node/issues"
   },
-  "homepage": "https://github.com/Saulo8732/desafio-node#readme"
+  "homepage": "https://github.com/Saulo8732/desafio-node#readme",
+  "dependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-es2015": "^6.24.1",
+    "body-parser": "^1.18.3",
+    "consign": "^0.1.6",
+    "express": "^4.16.4",
+    "mongoose": "^5.5.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.4.3",
+    "chai": "^4.2.0",
+    "eslint": "^5.3.0",
+    "eslint-config-airbnb": "^17.1.0",
+    "eslint-plugin-import": "^2.14.0",
+    "eslint-plugin-jsx-a11y": "^6.1.1",
+    "eslint-plugin-react": "^7.11.0",
+    "mocha": "^6.0.2",
+    "nodemon": "^1.18.11",
+    "supertest": "^4.0.2",
+    "supertest-as-promised": "^4.0.2"
+  }
 }

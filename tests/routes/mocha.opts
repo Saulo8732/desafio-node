@@ -1,0 +1,4 @@
+--require test/routes/helpers.js
+--reporter nyan
+--compilers js:babel-register
+--slow 3000
