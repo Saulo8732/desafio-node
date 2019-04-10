@@ -1,7 +1,7 @@
 import mongoose from 'mongoose';
 // Nomenclaturas usadas a partir dos requisitos repassados
 module.exports = () => {
-    const schema = new mongoose.Schema({
+  const schema = new mongoose.Schema({
     id: {
       type: String,
       trim: true,
@@ -32,10 +32,10 @@ module.exports = () => {
     token: {
       type: String,
     },
-    ultimo_login:{
-      type:Date,
-      default: Date.now
-    }
+    ultimo_login: {
+      type: Date,
+      default: Date.now,
+    },
   });
 
   return mongoose.model('user', schema);

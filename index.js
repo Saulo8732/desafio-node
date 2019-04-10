@@ -1,8 +1,8 @@
 import consign from 'consign';
 import express from 'express';
 import bodyParser from 'body-parser';
-import config from './src/config/config.js';
-import apiMessages from './src/helpers/apiMessages.js';
+import config from './src/config/config';
+import apiMessages from './src/helpers/apiMessages';
 
 const app = express();
 
