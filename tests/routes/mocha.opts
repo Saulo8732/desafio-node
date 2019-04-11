@@ -1,5 +1,0 @@
---require babel-core/register
---require tests/routes/helpers.js
---reporter nyan
---slow 3000
---timeout 5000
