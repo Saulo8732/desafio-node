@@ -15,6 +15,11 @@
         }]
     },
     "globals": {
-  
+      "describe": true,
+      "it": true,
+      "expect": true,
+      "app": true,
+      "before": true,
+      "request": true
     }
 }

@@ -1,4 +1,5 @@
 import expressJoi from 'express-joi';
+
 const Joi = expressJoi.Joi;
 
 module.exports = (app) => {
@@ -6,17 +7,14 @@ module.exports = (app) => {
   const Helpers = app.helpers.helper;
 
   app.post('/signin/', (req, res) => {
-      UserController.login(req,res);
-    });
+    UserController.login(req, res);
+  });
 
   app.post('/signup/', (req, res) => {
-    
-    UserController.create(req,res);
+    UserController.create(req, res);
   });
 
   app.get('/user/:id', (req, res) => {
-
-    UserController.search(req,res);
- 
+    UserController.search(req, res);
   });
 };

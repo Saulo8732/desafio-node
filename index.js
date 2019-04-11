@@ -1,11 +1,11 @@
 import consign from 'consign';
 import express from 'express';
 import bodyParser from 'body-parser';
-import config from './src/config/config';
-import apiMessages from './src/helpers/apiMessages';
 import mongoose from 'mongoose';
 import cors from 'cors';
 import expressValidator from 'express-validator';
+import apiMessages from './src/helpers/apiMessages';
+import config from './src/config/config';
 
 
 require('babel-core/register');

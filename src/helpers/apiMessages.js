@@ -21,6 +21,6 @@ module.exports = {
   },
   users: {
     emailAlreadyExists: 'E-mail já existente',
-    invalidEmail: 'Insira um e-mail válido'
+    invalidEmail: 'Insira um e-mail válido',
   },
 };
