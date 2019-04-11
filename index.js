@@ -18,7 +18,7 @@ require('babel-polyfill');
 // ----------------------------------------
 const app = express();
 const mongo_uri = process.env.MONGODB_URI || config.mongodb.uri;
-const port = process.env.PORT || config.server.port;
+const port =process.env.PORT || process.argv[2] || config.server.port;
 
 //-----------------------------------------
 //Mongoose Settings
