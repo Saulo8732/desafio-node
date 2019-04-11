@@ -1,7 +1,7 @@
 export default {
   mongodb: {
     useNewUrlParser: true,
-    uri: 'mongodb://localhost:27017/desafionode',
+    uri: 'mongodb://aplication:TqRXj7hGPainDMp@ds137596.mlab.com:37596/heroku_3qs8r4tn',
   },
   server: {
     port: 3000,
