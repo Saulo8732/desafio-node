@@ -1,24 +1,22 @@
+import expressJoi from 'express-joi';
+const Joi = expressJoi.Joi;
+
 module.exports = (app) => {
+  const UserController = app.controllers.user;
+  const Helpers = app.helpers.helper;
+
   app.post('/signin/', (req, res) => {
-    res.setHeader('Content-Type', 'application/json');
-    res.json(
-      {
-        response: 'signin',
-      }
-    );
-  });
-  app.post('/signup/', (req, res) => {
-    res.setHeader('Content-Type', 'application/json');
-    res.json(
-      {
-        response: 'signup',
-      },
-    );
-  });
-  app.get('/user/:id', (req, res) => {
-    res.setHeader('Content-Type', 'application/json');
-    res.json({
-      response: `The user with the ${req.params.id } ID will be displayed here.`,
+      UserController.login(req,res);
     });
+
+  app.post('/signup/', (req, res) => {
+    
+    UserController.create(req,res);
+  });
+
+  app.get('/user/:id', (req, res) => {
+
+    UserController.search(req,res);
+ 
   });
 };

@@ -5,10 +5,14 @@
   "main": "index.js",
   "scripts": {
     "start": "nodemon node_modules/babel-cli/bin/babel-node.js  index.js",
-    "test": "npm run lint",
-    "test:routes": "NODE_ENV=test ./node_modules/.bin/mocha  --opts test/routes/mocha.opts ./test/routes/**/*.js",
+    "tests": "npm run tests:routes && npm run tests:unit",
+    "tests:routes": "./node_modules/.bin/mocha --exit  --opts tests/routes/mocha.opts ./tests/routes/**/*.js",
+    "tests:unit": "./node_modules/.bin/mocha --exit  --opts tests/unit/mocha.opts ./tests/unit/**/*.js",
+    "coverage": "./node_modules/.bin/babel-node node_modules/.bin/babel-istanbul   cover node_modules/.bin/_mocha  -- ./test/**/*.js --recursive ",
+    "codecov": "node_modules/.bin/codedov",
     "lint": "eslint **/*.js",
-    "lint:fix": "eslint **/*.js --fix"
+    "lint:fix": "eslint **/*.js --fix",
+    "doc": "node_modules/.bin/apidoc -i routes/  -o doc"
   },
   "repository": {
     "type": "git",
@@ -22,24 +26,63 @@
   "homepage": "https://github.com/Saulo8732/desafio-node#readme",
   "dependencies": {
     "babel-cli": "^6.26.0",
+    "babel-plugin-transform-async-to-generator": "^6.24.1",
     "babel-preset-es2015": "^6.24.1",
+    "blueimp-md5": "^2.10.0",
     "body-parser": "^1.18.3",
     "consign": "^0.1.6",
+    "cors": "^2.8.5",
     "express": "^4.16.4",
+    "express-joi": "^0.3.1",
+    "express-validator": "^5.3.1",
+    "jsonwebtoken": "^8.5.1",
     "mongoose": "^5.5.0"
   },
   "devDependencies": {
-    "@babel/core": "^7.4.3",
+    "apidoc": "^0.17.7",
+    "babel-core": "^6.26.3",
+    "babel-istanbul": "^0.12.2",
+    "babel-loader": "^8.0.5",
+    "babel-plugin-istanbul": "^5.1.1",
+    "babel-polyfill": "^6.26.0",
+    "babel-preset-stage-0": "^6.24.1",
+    "babel-register": "^6.26.0",
     "chai": "^4.2.0",
+    "codecov": "^3.3.0",
     "eslint": "^5.3.0",
     "eslint-config-airbnb": "^17.1.0",
     "eslint-plugin-import": "^2.14.0",
     "eslint-plugin-jsx-a11y": "^6.1.1",
     "eslint-plugin-react": "^7.11.0",
     "eslint-plugin-standard": "^4.0.0",
+    "istanbul": "^0.4.5",
     "mocha": "^6.0.2",
     "nodemon": "^1.18.11",
     "supertest": "^4.0.2",
     "supertest-as-promised": "^4.0.2"
+  },
+  "babel": {
+    "presets": [
+      "es2015"
+    ],
+    "plugins": [
+      "transform-async-to-generator"
+    ],
+    "env": {
+      "test": {
+        "plugins": [
+          "istanbul"
+        ]
+      }
+    }
+  },
+  "apidoc": {
+    "name": "Construct Solutions Desafio Node",
+    "version": "0.0.1",
+    "description": "Construção da api para o desafio node",
+    "apidoc": {
+      "title": "Construct Solutions desafio node",
+      "url": "https://kirmayrtomaz.github.io/cs-desafio-node/"
+    }
   }
 }

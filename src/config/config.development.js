@@ -1,6 +1,7 @@
 export default {
   mongodb: {
-    uri: 'mongodb://localhost:27017/users',
+    useNewUrlParser: true,
+    uri: 'mongodb://localhost:27017/desafionode'
   },
   server: {
     port: 3000,
@@ -14,4 +15,10 @@ export default {
     extensions: ['.js'],
     verbose: false,
   },
+  jwt: {
+    secret: "concrete-solution-token",
+    config: {
+      expiresIn: 30 * 60  
+    }
+  }
 };

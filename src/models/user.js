@@ -10,7 +10,6 @@ module.exports = () => {
     nome: {
       type: String,
       required: true,
-
     },
     email: {
       type: String,

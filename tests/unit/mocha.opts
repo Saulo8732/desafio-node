@@ -1,5 +1,6 @@
 --require babel-core/register
---require tests/routes/helpers.js
+--require tests/unit/helpers.js
 --reporter nyan
 --slow 3000
 --timeout 5000
+--sort
