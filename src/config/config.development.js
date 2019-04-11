@@ -5,7 +5,7 @@ export default {
   },
   server: {
     port: 3000,
-    host: 'localhost',
+    host:  process.env.YOUR_HOST || '0.0.0.0',
   },
   bodyParser: {
     extend: true,

@@ -55,7 +55,7 @@ consign(config.consign)
   .then('routes')
   .into(app);
 
-app.listen(config.server.port, () => {
+app.listen(port, () => {
   console.log(apiMessages.general.apiStarted + port);
 });
 
