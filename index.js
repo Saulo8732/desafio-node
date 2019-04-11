@@ -7,19 +7,43 @@ import expressValidator from 'express-validator';
 import apiMessages from './src/helpers/apiMessages';
 import config from './src/config/config';
 
-
+// ----------------------------------------
+// Babel 
+// ----------------------------------------
 require('babel-core/register');
 require('babel-polyfill');
 
-
+// ----------------------------------------
+// App Variables
+// ----------------------------------------
 const app = express();
 const mongo_uri = process.env.MONGODB_URI || config.mongodb.uri;
 const port = process.env.PORT || config.server.port;
 
+//-----------------------------------------
+//Mongoose Settings
+//-----------------------------------------
 mongoose.connect(mongo_uri, config.mongodb);
+
+/*
+app.use((req, res, next) => {
+  if (mongoose.connection.readyState) {
+    next();
+  } else {
+    require("./mongo")().then(() => next());
+  }
+}); */
+
+// ----------------------------------------
+// Express Validator & Cors
+// ----------------------------------------
 
 app.use(expressValidator());
 app.use(cors());
+
+// ----------------------------------------
+// Body Parser
+// ----------------------------------------
 app.use(bodyParser.urlencoded(config.bodyParser));
 app.use(bodyParser.json());
 
