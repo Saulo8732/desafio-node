@@ -154,14 +154,14 @@ module.exports  =(app) =>{
     
     if(data === 'error1'){
     
-      res.status(http.ANAUTHORIZED);
+      res.status(http.UNAUTHORIZED);
       res.json({mensagem:messages.authetication.invalidSession})
       
       return 
     }
     if(data === 'error2' ){
       res.status(http.UNAUTHORIZED);
-      res.json({mensagem:'Não Autorizado Inválida'})
+      res.json({mensagem: messages.authetication.invalidSession})
      
    return 
     }

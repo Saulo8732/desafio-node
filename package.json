@@ -12,7 +12,7 @@
     "codecov": "node_modules/.bin/codecov",
     "lint": "eslint **/*.js",
     "lint:fix": "eslint **/*.js --fix",
-    "doc": "node_modules/.bin/apidoc -i routes/  -o doc"
+    "doc": "node_modules/.bin/apidoc -i src/routes/  -o doc"
   },
   "repository": {
     "type": "git",
