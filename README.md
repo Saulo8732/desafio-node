@@ -1,5 +1,7 @@
 # desafio-node
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/Saulo8732/desafio-node.svg)](https://greenkeeper.io/)
+
 Teste de NodeJS para a Concrete!
 
 Desafio: 
