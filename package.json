@@ -34,13 +34,13 @@
     "cors": "^2.8.5",
     "express": "^4.16.4",
     "express-joi": "^0.3.1",
-    "express-validator": "^5.3.1",
+    "express-validator": "^6.2.0",
     "jsonwebtoken": "^8.5.1",
     "mongoose": "^5.5.0",
-    "nodemon": "^1.18.11"
+    "nodemon": "^2.0.0"
   },
   "devDependencies": {
-    "apidoc": "^0.17.7",
+    "apidoc": "^0.18.0",
     "babel-core": "^6.26.3",
     "babel-istanbul": "^0.12.2",
     "babel-loader": "^8.0.5",
@@ -50,8 +50,8 @@
     "babel-register": "^6.26.0",
     "chai": "^4.2.0",
     "codecov": "^3.3.0",
-    "eslint": "^5.3.0",
-    "eslint-config-airbnb": "^17.1.0",
+    "eslint": "^6.6.0",
+    "eslint-config-airbnb": "^18.0.1",
     "eslint-plugin-import": "^2.14.0",
     "eslint-plugin-jsx-a11y": "^6.1.1",
     "eslint-plugin-react": "^7.11.0",
